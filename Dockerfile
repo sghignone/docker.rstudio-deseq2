@@ -6,7 +6,7 @@ LABEL description=""
 
 RUN apt-get update \
 	&& apt-get upgrade \
-	&& apt-get install -y zlib1g-dev libxml2-dev
+	&& apt-get install -y zlib1g-dev libxml2-dev \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN Rscript -e 'source("http://bioconductor.org/biocLite.R")' -e 'biocLite("DESeq2")
