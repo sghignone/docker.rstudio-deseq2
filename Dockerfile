@@ -1,8 +1,8 @@
 FROM rocker/rstudio
 
 LABEL maintainer="Stefano Ghignone, IPSP-CNR, Turin, Italy, stefano.ghignone[at]ipsp.cnr.it"
-LABEL version="dev."
-LABEL description=""
+LABEL version="1.0-stable"
+LABEL description="Rsudio with DESeq2"
 
 RUN apt-get update \
 	&& apt-get upgrade \
