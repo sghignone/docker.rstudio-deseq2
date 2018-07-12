@@ -19,6 +19,6 @@ RUN apt-get install -y oracle-java8-installer \
 	&& R CMD javareconf
 
 RUN echo "r <- getOption('repos'); r['CRAN'] <- 'http://cran.us.r-project.org'; options(repos = r);" > ~/.Rprofile
-RUN Rscript -e "install.packages('yhatr')"
+RUN Rscript -e "install.packages('xlsx')"
 
 RUN Rscript -e 'source("http://bioconductor.org/biocLite.R")' -e 'biocLite("DESeq2")'
