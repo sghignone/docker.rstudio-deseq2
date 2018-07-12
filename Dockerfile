@@ -13,7 +13,7 @@ RUN echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
 RUN apt-get update
 RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
-apt-get install -y oracle-java8-installer \
+RUN apt-get install -y oracle-java8-installer \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& R CMD javareconf
